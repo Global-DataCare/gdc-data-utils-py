@@ -1,0 +1,4 @@
+interface:
+  display_name: "Sync GDC Python Claims"
+  short_description: "Regenerate and verify Python claim parity"
+  default_prompt: "Use $sync-gdc-python-claim-catalog to synchronize Python flat claims with gdc-common-utils-ts."
