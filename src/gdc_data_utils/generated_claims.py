@@ -18,6 +18,14 @@ class AllergyIntoleranceClaim:
     CONTAINED_DOCUMENTS = 'AllergyIntolerance.contained-documents'
     ATTACHMENT_CONTENT_IDS = 'AllergyIntolerance.attachment-content-ids'
     CRITICALITY = 'AllergyIntolerance.criticality'
+    ASSERTER = 'AllergyIntolerance.asserter'
+    RECORDED_DATE = 'AllergyIntolerance.date'
+    LAST_OCCURRENCE = 'AllergyIntolerance.last-date'
+    MANIFESTATION = 'AllergyIntolerance.manifestation'
+    ONSET = 'AllergyIntolerance.onset'
+    ROUTE = 'AllergyIntolerance.route'
+    SEVERITY = 'AllergyIntolerance.severity'
+    TYPE = 'AllergyIntolerance.type'
     ONSET_DATE_TIME = 'AllergyIntolerance.onset-datetime'
     RECORDER = 'AllergyIntolerance.recorder'
 
@@ -399,6 +407,8 @@ class MedicationStatementClaim:
     STATUS = 'MedicationStatement.status'
     CATEGORY = 'MedicationStatement.category'
     EFFECTIVE = 'MedicationStatement.effective'
+    EFFECTIVE_PERIOD_START = 'MedicationStatement.effective-period-start'
+    EFFECTIVE_PERIOD_END = 'MedicationStatement.effective-period-end'
     CODE = 'MedicationStatement.code'
     CODE_TEXT = 'MedicationStatement.code-text'
     CODE_TEXT_LOCAL = 'MedicationStatement.code-text'
@@ -546,6 +556,62 @@ class RelatedPersonClaim:
     RELATED_ENTITY_TYPE = 'RelatedPerson.related-entity-type'
     ACTOR_IDENTIFIER = 'RelatedPerson.actor-identifier'
 
+class ResearchSubjectClaim:
+    """Canonical flat claims from TypeScript ``ResearchSubjectClaim``."""
+
+    IDENTIFIER = 'ResearchSubject.identifier'
+
+class TaskClaim:
+    """Canonical flat claims from TypeScript ``TaskClaim``."""
+
+    ID = 'Task.id'
+    IDENTIFIER = 'Task.identifier'
+    GROUP_IDENTIFIER = 'Task.group-identifier'
+    STATUS = 'Task.status'
+    STATUS_REASON = 'Task.status-reason'
+    BUSINESS_STATUS = 'Task.business-status'
+    INTENT = 'Task.intent'
+    CODE = 'Task.code'
+    DESCRIPTION = 'Task.description'
+    SUBJECT = 'Task.subject'
+    FOR = 'Task.for'
+    REQUESTER = 'Task.requester'
+    OWNER = 'Task.owner'
+    FOCUS = 'Task.focus'
+    PART_OF = 'Task.part-of'
+    BASED_ON = 'Task.based-on'
+    BASED_ON_DISPLAY = 'Task.based-on-display'
+    LANGUAGE = 'Task.language'
+    CHANNEL = 'Task.channel'
+    AUTHORED_ON = 'Task.authored-on'
+    LAST_MODIFIED = 'Task.last-modified'
+    SCHEDULED_AT = 'Task.scheduled-at'
+    RETRY_INTERVAL_MINUTES = 'Task.retry-interval-minutes'
+    MAX_ATTEMPTS = 'Task.max-attempts'
+    TRIGGER_TYPE = 'Task.trigger-type'
+    ATTEMPT = 'Task.attempt'
+    WINDOW_START = 'Task.window-start'
+    WINDOW_END = 'Task.window-end'
+    AUTO_CLOSE_AT = 'Task.auto-close-at'
+    ESCALATION_RECIPIENT = 'Task.escalation-recipient'
+    CONFIRMED = 'Task.confirmed'
+    CONFIRMED_AT = 'Task.confirmed-at'
+    REPETITIONS = 'Task.repetitions'
+    DAYS_OF_WEEK = 'Task.days-of-week'
+    REPEAT_COUNT = 'Task.repeat-count'
+    REPEAT_DURATION_VALUE = 'Task.repeat-duration-value'
+    REPEAT_DURATION_UNIT = 'Task.repeat-duration-unit'
+    MODIFIED = 'Task.modified'
+    PRIORITY = 'Task.priority'
+    RESTRICTION_PERIOD_START = 'Task.restriction-period-start'
+    RESTRICTION_PERIOD_END = 'Task.restriction-period-end'
+    EXECUTION_PERIOD_START = 'Task.execution-period-start'
+    EXECUTION_PERIOD_END = 'Task.execution-period-end'
+    OUTPUT_TYPE = 'Task.output-type'
+    OUTPUT_VALUE_REFERENCE = 'Task.output-value-reference'
+    OUTPUT_VALUE_STRING = 'Task.output-value-string'
+    USER_SELECTED = 'Task.user-selected'
+
 __all__ = [
     'AllergyIntoleranceClaim',
     'AppointmentClaim',
@@ -572,4 +638,6 @@ __all__ = [
     'PractitionerRoleClaim',
     'ProcedureClaim',
     'RelatedPersonClaim',
+    'ResearchSubjectClaim',
+    'TaskClaim',
 ]

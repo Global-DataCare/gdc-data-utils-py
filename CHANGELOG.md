@@ -2,6 +2,11 @@
 
 ## Unreleased
 
+- Synchronize frozen TypeScript `*Claim` objects and historical short-claim
+  enums instead of silently omitting them from the Python catalog.
+- Add the canonical `TaskClaim` and `ResearchSubjectClaim` classes, including
+  the standard FHIR R5 Task workflow and asynchronous-job correlation fields.
+
 - Added a generated Python catalog for the canonical flat FHIR-like claims
   defined by `gdc-common-utils-ts`.
 - Added explicit mappings between `DiagnosticReport.code-text`, FHIR

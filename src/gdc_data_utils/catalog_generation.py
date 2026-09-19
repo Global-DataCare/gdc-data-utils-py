@@ -8,11 +8,16 @@ import re
 
 _CLAIM_OBJECT = re.compile(
     r"export\s+const\s+(?P<name>[A-Za-z][A-Za-z0-9]*Claim)\s*=\s*"
-    r"\{(?P<body>.*?)\}\s*as\s+const\s*;",
+    r"(?:Object\.freeze\s*\(\s*)?\{(?P<body>.*?)\}\s*as\s+const\s*\)?\s*;",
+    re.DOTALL,
+)
+_CLAIM_ENUM = re.compile(
+    r"export\s+enum\s+(?P<name>[A-Za-z][A-Za-z0-9]*Claim(?:sFhirApi)?)\s*"
+    r"\{(?P<body>.*?)\}",
     re.DOTALL,
 )
 _CLAIM_PROPERTY = re.compile(
-    r"^\s*(?P<name>[A-Za-z][A-Za-z0-9]*):\s*"
+    r"^\s*(?P<name>[A-Za-z][A-Za-z0-9]*)\s*(?::|=)\s*"
     r"['\"](?P<value>[A-Z][A-Za-z0-9]+\.[A-Za-z0-9.-]+)['\"]\s*,?",
     re.MULTILINE,
 )
@@ -39,14 +44,22 @@ def extract_claim_definitions(
     definitions: dict[str, tuple[tuple[str, str], ...]] = {}
     for path in sorted(source.glob("*-claims.ts")):
         text = path.read_text(encoding="utf-8")
-        for object_match in _CLAIM_OBJECT.finditer(text):
+        matches = [
+            *((match, True) for match in _CLAIM_OBJECT.finditer(text)),
+            *((match, False) for match in _CLAIM_ENUM.finditer(text)),
+        ]
+        for object_match, required in sorted(matches, key=lambda item: item[0].start()):
             name = object_match.group("name")
             properties = tuple(
                 (match.group("name"), match.group("value"))
                 for match in _CLAIM_PROPERTY.finditer(object_match.group("body"))
             )
             if not properties:
-                raise ValueError(f"exported claim object has no literal claims: {path}:{name}")
+                if required:
+                    raise ValueError(
+                        f"exported claim object has no literal claims: {path}:{name}"
+                    )
+                continue
             if name in definitions:
                 raise ValueError(f"duplicate exported claim object: {name}")
             definitions[name] = properties

@@ -4,10 +4,11 @@ Python claim catalogs and normalization utilities aligned with
 `gdc-common-utils-ts`, the current canonical successor to the historical
 `_dataspace-client-sdk-node-OLD` claim definitions.
 
-The generated catalog and Python constant classes cover only exported
-`*Claim = {...} as const` objects from `gdc-common-utils-ts`. FHIR projection
-paths, examples and contextual enums are deliberately excluded. Regenerate
-after a canonical TypeScript claim change:
+The generated catalog and Python constant classes cover exported short-claim
+`*Claim = {...} as const` objects, frozen claim objects, and historical claim
+enums from `gdc-common-utils-ts`. FHIR projection paths, examples and expanded
+contextual enums are deliberately excluded. Regenerate after a canonical
+TypeScript claim change:
 
 ```bash
 PYTHONPATH=src python scripts/generate_claim_catalog.py ../gdc-common-utils-ts
