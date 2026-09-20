@@ -1,7 +1,15 @@
 """Generated from exported gdc-common-utils-ts *Claim objects; do not edit."""
 
 class AllergyIntoleranceClaim:
-    """Canonical flat claims from TypeScript ``AllergyIntoleranceClaim``."""
+    """FHIR-like flat claims generated from TypeScript ``AllergyIntoleranceClaim``.
+
+    Only names published on the resource search page are canonical
+    FHIR search parameters. Other names require a FHIR standard or
+    custom extension contract.
+
+    Search parameters: https://hl7.org/fhir/allergyintolerance.html#search
+    Standard extensions: https://hl7.org/fhir/extensions/extensions-AllergyIntolerance.html
+    """
 
     IDENTIFIER = 'AllergyIntolerance.identifier'
     SUBJECT = 'AllergyIntolerance.subject'
@@ -30,7 +38,15 @@ class AllergyIntoleranceClaim:
     RECORDER = 'AllergyIntolerance.recorder'
 
 class AppointmentClaim:
-    """Canonical flat claims from TypeScript ``AppointmentClaim``."""
+    """FHIR-like flat claims generated from TypeScript ``AppointmentClaim``.
+
+    Only names published on the resource search page are canonical
+    FHIR search parameters. Other names require a FHIR standard or
+    custom extension contract.
+
+    Search parameters: https://hl7.org/fhir/appointment.html#search
+    Standard extensions: https://hl7.org/fhir/extensions/extensions-Appointment.html
+    """
 
     IDENTIFIER = 'Appointment.identifier'
     STATUS = 'Appointment.status'
@@ -53,7 +69,15 @@ class AppointmentClaim:
     PARTICIPANT_TYPE = 'Appointment.participant-type'
 
 class AppointmentResponseClaim:
-    """Canonical flat claims from TypeScript ``AppointmentResponseClaim``."""
+    """FHIR-like flat claims generated from TypeScript ``AppointmentResponseClaim``.
+
+    Only names published on the resource search page are canonical
+    FHIR search parameters. Other names require a FHIR standard or
+    custom extension contract.
+
+    Search parameters: https://hl7.org/fhir/appointmentresponse.html#search
+    Standard extensions: https://hl7.org/fhir/extensions/extensions-AppointmentResponse.html
+    """
 
     ACTOR = 'AppointmentResponse.actor'
     APPOINTMENT = 'AppointmentResponse.appointment'
@@ -68,7 +92,15 @@ class AppointmentResponseClaim:
     LOCATION = 'AppointmentResponse.location'
 
 class CarePlanClaim:
-    """Canonical flat claims from TypeScript ``CarePlanClaim``."""
+    """FHIR-like flat claims generated from TypeScript ``CarePlanClaim``.
+
+    Only names published on the resource search page are canonical
+    FHIR search parameters. Other names require a FHIR standard or
+    custom extension contract.
+
+    Search parameters: https://hl7.org/fhir/careplan.html#search
+    Standard extensions: https://hl7.org/fhir/extensions/extensions-CarePlan.html
+    """
 
     ACTIVITY_CODE = 'CarePlan.activity-code'
     ACTIVITY_DATE = 'CarePlan.activity-date'
@@ -104,11 +136,22 @@ class CarePlanClaim:
     ACTIVITY_TIMING_PERIOD_UNIT = 'CarePlan.activity-timing-period-unit'
 
 class ChargeItemClaim:
-    """Canonical flat claims from TypeScript ``ChargeItemClaim``."""
+    """FHIR-like flat claims generated from TypeScript ``ChargeItemClaim``.
+
+    Only names published on the resource search page are canonical
+    FHIR search parameters. Other names require a FHIR standard or
+    custom extension contract.
+
+    Search parameters: https://hl7.org/fhir/chargeitem.html#search
+    Standard extensions: https://hl7.org/fhir/extensions/extensions-ChargeItem.html
+    """
 
     IDENTIFIER = 'ChargeItem.identifier'
     STATUS = 'ChargeItem.status'
     PART_OF = 'ChargeItem.part-of'
+    SUBJECT = 'ChargeItem.subject'
+    OCCURRENCE = 'ChargeItem.occurrence'
+    SUPPORTING_INFORMATION = 'ChargeItem.supporting-information'
     CODE = 'ChargeItem.code'
     CODE_TEXT = 'ChargeItem.code-text'
     CATEGORY = 'ChargeItem.category'
@@ -120,12 +163,17 @@ class ChargeItemClaim:
     ITEMS_QUANTITY = 'ChargeItem.items-quantity'
     ITEMS_QUANTITY_NUMBER = 'ChargeItem.items-quantity-number'
     ITEMS_QUANTITY_UNIT = 'ChargeItem.items-quantity-unit'
-    SUPPORTING_INFORMATION = 'ChargeItem.supporting-information'
-    SUBJECT = 'ChargeItem.subject'
-    OCCURRENCE = 'ChargeItem.occurrence'
 
 class ClinicalImpressionClaim:
-    """Canonical flat claims from TypeScript ``ClinicalImpressionClaim``."""
+    """FHIR-like flat claims generated from TypeScript ``ClinicalImpressionClaim``.
+
+    Only names published on the resource search page are canonical
+    FHIR search parameters. Other names require a FHIR standard or
+    custom extension contract.
+
+    Search parameters: https://hl7.org/fhir/clinicalimpression.html#search
+    Standard extensions: https://hl7.org/fhir/extensions/extensions-ClinicalImpression.html
+    """
 
     IDENTIFIER = 'ClinicalImpression.identifier'
     STATUS = 'ClinicalImpression.status'
@@ -141,7 +189,15 @@ class ClinicalImpressionClaim:
     SUMMARY = 'ClinicalImpression.summary'
 
 class CommunicationClaim:
-    """Canonical flat claims from TypeScript ``CommunicationClaim``."""
+    """FHIR-like flat claims generated from TypeScript ``CommunicationClaim``.
+
+    Only names published on the resource search page are canonical
+    FHIR search parameters. Other names require a FHIR standard or
+    custom extension contract.
+
+    Search parameters: https://hl7.org/fhir/communication.html#search
+    Standard extensions: https://hl7.org/fhir/extensions/extensions-Communication.html
+    """
 
     CATEGORY = 'Communication.category'
     STATUS = 'Communication.status'
@@ -162,7 +218,15 @@ class CommunicationClaim:
     PART_OF = 'Communication.part-of'
 
 class CompositionClaim:
-    """Canonical flat claims from TypeScript ``CompositionClaim``."""
+    """FHIR-like flat claims generated from TypeScript ``CompositionClaim``.
+
+    Only names published on the resource search page are canonical
+    FHIR search parameters. Other names require a FHIR standard or
+    custom extension contract.
+
+    Search parameters: https://hl7.org/fhir/composition.html#search
+    Standard extensions: https://hl7.org/fhir/extensions/extensions-Composition.html
+    """
 
     SUBJECT = 'Composition.subject'
     SECTION = 'Composition.section'
@@ -178,7 +242,15 @@ class CompositionClaim:
     TITLE = 'Composition.title'
 
 class ConditionClaim:
-    """Canonical flat claims from TypeScript ``ConditionClaim``."""
+    """FHIR-like flat claims generated from TypeScript ``ConditionClaim``.
+
+    Only names published on the resource search page are canonical
+    FHIR search parameters. Other names require a FHIR standard or
+    custom extension contract.
+
+    Search parameters: https://hl7.org/fhir/condition.html#search
+    Standard extensions: https://hl7.org/fhir/extensions/extensions-Condition.html
+    """
 
     IDENTIFIER = 'Condition.identifier'
     SUBJECT = 'Condition.subject'
@@ -200,7 +272,15 @@ class ConditionClaim:
     RECORDER = 'Condition.recorder'
 
 class CoverageClaim:
-    """Canonical flat claims from TypeScript ``CoverageClaim``."""
+    """FHIR-like flat claims generated from TypeScript ``CoverageClaim``.
+
+    Only names published on the resource search page are canonical
+    FHIR search parameters. Other names require a FHIR standard or
+    custom extension contract.
+
+    Search parameters: https://hl7.org/fhir/coverage.html#search
+    Standard extensions: https://hl7.org/fhir/extensions/extensions-Coverage.html
+    """
 
     IDENTIFIER = 'Coverage.identifier'
     STATUS = 'Coverage.status'
@@ -215,7 +295,15 @@ class CoverageClaim:
     CLASS = 'Coverage.class'
 
 class DeviceClaim:
-    """Canonical flat claims from TypeScript ``DeviceClaim``."""
+    """FHIR-like flat claims generated from TypeScript ``DeviceClaim``.
+
+    Only names published on the resource search page are canonical
+    FHIR search parameters. Other names require a FHIR standard or
+    custom extension contract.
+
+    Search parameters: https://hl7.org/fhir/device.html#search
+    Standard extensions: https://hl7.org/fhir/extensions/extensions-Device.html
+    """
 
     DEVICE_NAME = 'Device.device-name'
     IDENTIFIER = 'Device.identifier'
@@ -234,7 +322,15 @@ class DeviceClaim:
     NOTE = 'Device.note'
 
 class DeviceUseStatementClaim:
-    """Canonical flat claims from TypeScript ``DeviceUseStatementClaim``."""
+    """FHIR-like flat claims generated from TypeScript ``DeviceUseStatementClaim``.
+
+    Only names published on the resource search page are canonical
+    FHIR search parameters. Other names require a FHIR standard or
+    custom extension contract.
+
+    Search parameters: https://hl7.org/fhir/deviceusestatement.html#search
+    Standard extensions: https://hl7.org/fhir/extensions/extensions-DeviceUseStatement.html
+    """
 
     IDENTIFIER = 'DeviceUseStatement.identifier'
     SUBJECT = 'DeviceUseStatement.subject'
@@ -248,7 +344,15 @@ class DeviceUseStatementClaim:
     SOURCE = 'DeviceUseStatement.source'
 
 class DiagnosticReportClaim:
-    """Canonical flat claims from TypeScript ``DiagnosticReportClaim``."""
+    """FHIR-like flat claims generated from TypeScript ``DiagnosticReportClaim``.
+
+    Only names published on the resource search page are canonical
+    FHIR search parameters. Other names require a FHIR standard or
+    custom extension contract.
+
+    Search parameters: https://hl7.org/fhir/diagnosticreport.html#search
+    Standard extensions: https://hl7.org/fhir/extensions/extensions-DiagnosticReport.html
+    """
 
     BASED_ON = 'DiagnosticReport.based-on'
     CATEGORY = 'DiagnosticReport.category'
@@ -275,7 +379,15 @@ class DiagnosticReportClaim:
     CONTAINED_DOCUMENTS = 'DiagnosticReport.contained-documents'
 
 class DocumentReferenceClaim:
-    """Canonical flat claims from TypeScript ``DocumentReferenceClaim``."""
+    """FHIR-like flat claims generated from TypeScript ``DocumentReferenceClaim``.
+
+    Only names published on the resource search page are canonical
+    FHIR search parameters. Other names require a FHIR standard or
+    custom extension contract.
+
+    Search parameters: https://hl7.org/fhir/documentreference.html#search
+    Standard extensions: https://hl7.org/fhir/extensions/extensions-DocumentReference.html
+    """
 
     ATTESTER = 'DocumentReference.attester'
     AUTHOR = 'DocumentReference.author'
@@ -304,7 +416,15 @@ class DocumentReferenceClaim:
     USER_SELECTED = 'DocumentReference.user-selected'
 
 class EncounterClaim:
-    """Canonical flat claims from TypeScript ``EncounterClaim``."""
+    """FHIR-like flat claims generated from TypeScript ``EncounterClaim``.
+
+    Only names published on the resource search page are canonical
+    FHIR search parameters. Other names require a FHIR standard or
+    custom extension contract.
+
+    Search parameters: https://hl7.org/fhir/encounter.html#search
+    Standard extensions: https://hl7.org/fhir/extensions/extensions-Encounter.html
+    """
 
     IDENTIFIER = 'Encounter.identifier'
     STATUS = 'Encounter.status'
@@ -321,7 +441,15 @@ class EncounterClaim:
     LOCATION = 'Encounter.location'
 
 class FlagClaim:
-    """Canonical flat claims from TypeScript ``FlagClaim``."""
+    """FHIR-like flat claims generated from TypeScript ``FlagClaim``.
+
+    Only names published on the resource search page are canonical
+    FHIR search parameters. Other names require a FHIR standard or
+    custom extension contract.
+
+    Search parameters: https://hl7.org/fhir/flag.html#search
+    Standard extensions: https://hl7.org/fhir/extensions/extensions-Flag.html
+    """
 
     AUTHOR = 'Flag.author'
     DATE = 'Flag.date'
@@ -337,9 +465,19 @@ class FlagClaim:
     CODE_DISPLAY = 'Flag.code-display'
     PERIOD_START = 'Flag.period-start'
     PERIOD_END = 'Flag.period-end'
+    DETAIL = 'Flag.flag-detail'
+    PRIORITY = 'Flag.flag-priority'
 
 class ImmunizationClaim:
-    """Canonical flat claims from TypeScript ``ImmunizationClaim``."""
+    """FHIR-like flat claims generated from TypeScript ``ImmunizationClaim``.
+
+    Only names published on the resource search page are canonical
+    FHIR search parameters. Other names require a FHIR standard or
+    custom extension contract.
+
+    Search parameters: https://hl7.org/fhir/immunization.html#search
+    Standard extensions: https://hl7.org/fhir/extensions/extensions-Immunization.html
+    """
 
     DATE = 'Immunization.date'
     IDENTIFIER = 'Immunization.identifier'
@@ -367,7 +505,15 @@ class ImmunizationClaim:
     SITE_DISPLAY = 'Immunization.site-display'
 
 class InvoiceClaim:
-    """Canonical flat claims from TypeScript ``InvoiceClaim``."""
+    """FHIR-like flat claims generated from TypeScript ``InvoiceClaim``.
+
+    Only names published on the resource search page are canonical
+    FHIR search parameters. Other names require a FHIR standard or
+    custom extension contract.
+
+    Search parameters: https://hl7.org/fhir/invoice.html#search
+    Standard extensions: https://hl7.org/fhir/extensions/extensions-Invoice.html
+    """
 
     IDENTIFIER = 'Invoice.identifier'
     DATE = 'Invoice.date'
@@ -384,7 +530,15 @@ class InvoiceClaim:
     TOTAL_GROSS_CURRENCY = 'Invoice.totalgross-currency'
 
 class LocationClaim:
-    """Canonical flat claims from TypeScript ``LocationClaim``."""
+    """FHIR-like flat claims generated from TypeScript ``LocationClaim``.
+
+    Only names published on the resource search page are canonical
+    FHIR search parameters. Other names require a FHIR standard or
+    custom extension contract.
+
+    Search parameters: https://hl7.org/fhir/location.html#search
+    Standard extensions: https://hl7.org/fhir/extensions/extensions-Location.html
+    """
 
     IDENTIFIER = 'Location.identifier'
     STATUS = 'Location.status'
@@ -399,7 +553,15 @@ class LocationClaim:
     PART_OF = 'Location.part-of'
 
 class MedicationStatementClaim:
-    """Canonical flat claims from TypeScript ``MedicationStatementClaim``."""
+    """FHIR-like flat claims generated from TypeScript ``MedicationStatementClaim``.
+
+    Only names published on the resource search page are canonical
+    FHIR search parameters. Other names require a FHIR standard or
+    custom extension contract.
+
+    Search parameters: https://hl7.org/fhir/medicationstatement.html#search
+    Standard extensions: https://hl7.org/fhir/extensions/extensions-MedicationStatement.html
+    """
 
     IDENTIFIER = 'MedicationStatement.identifier'
     SUBJECT = 'MedicationStatement.subject'
@@ -438,7 +600,15 @@ class MedicationStatementClaim:
     TIMING_PERIOD_UNIT = 'MedicationStatement.timing-period-unit'
 
 class ObservationClaim:
-    """Canonical flat claims from TypeScript ``ObservationClaim``."""
+    """FHIR-like flat claims generated from TypeScript ``ObservationClaim``.
+
+    Only names published on the resource search page are canonical
+    FHIR search parameters. Other names require a FHIR standard or
+    custom extension contract.
+
+    Search parameters: https://hl7.org/fhir/observation.html#search
+    Standard extensions: https://hl7.org/fhir/extensions/extensions-Observation.html
+    """
 
     BASED_ON = 'Observation.based-on'
     CATEGORY = 'Observation.category'
@@ -489,7 +659,15 @@ class ObservationClaim:
     EFFECTIVE_DATE_TIME = 'Observation.effective-datetime'
 
 class OrganizationClaim:
-    """Canonical flat claims from TypeScript ``OrganizationClaim``."""
+    """FHIR-like flat claims generated from TypeScript ``OrganizationClaim``.
+
+    Only names published on the resource search page are canonical
+    FHIR search parameters. Other names require a FHIR standard or
+    custom extension contract.
+
+    Search parameters: https://hl7.org/fhir/organization.html#search
+    Standard extensions: https://hl7.org/fhir/extensions/extensions-Organization.html
+    """
 
     IDENTIFIER = 'Organization.identifier'
     ACTIVE = 'Organization.active'
@@ -501,7 +679,15 @@ class OrganizationClaim:
     ADDRESS = 'Organization.address'
 
 class PractitionerRoleClaim:
-    """Canonical flat claims from TypeScript ``PractitionerRoleClaim``."""
+    """FHIR-like flat claims generated from TypeScript ``PractitionerRoleClaim``.
+
+    Only names published on the resource search page are canonical
+    FHIR search parameters. Other names require a FHIR standard or
+    custom extension contract.
+
+    Search parameters: https://hl7.org/fhir/practitionerrole.html#search
+    Standard extensions: https://hl7.org/fhir/extensions/extensions-PractitionerRole.html
+    """
 
     IDENTIFIER = 'PractitionerRole.identifier'
     ACTIVE = 'PractitionerRole.active'
@@ -517,7 +703,15 @@ class PractitionerRoleClaim:
     CODE_DISPLAY = 'PractitionerRole.code-display'
 
 class ProcedureClaim:
-    """Canonical flat claims from TypeScript ``ProcedureClaim``."""
+    """FHIR-like flat claims generated from TypeScript ``ProcedureClaim``.
+
+    Only names published on the resource search page are canonical
+    FHIR search parameters. Other names require a FHIR standard or
+    custom extension contract.
+
+    Search parameters: https://hl7.org/fhir/procedure.html#search
+    Standard extensions: https://hl7.org/fhir/extensions/extensions-Procedure.html
+    """
 
     BASED_ON = 'Procedure.based-on'
     BODY_SITE = 'Procedure.body-site'
@@ -540,7 +734,15 @@ class ProcedureClaim:
     NOTE = 'Procedure.note'
 
 class RelatedPersonClaim:
-    """Canonical flat claims from TypeScript ``RelatedPersonClaim``."""
+    """FHIR-like flat claims generated from TypeScript ``RelatedPersonClaim``.
+
+    Only names published on the resource search page are canonical
+    FHIR search parameters. Other names require a FHIR standard or
+    custom extension contract.
+
+    Search parameters: https://hl7.org/fhir/relatedperson.html#search
+    Standard extensions: https://hl7.org/fhir/extensions/extensions-RelatedPerson.html
+    """
 
     IDENTIFIER = 'RelatedPerson.identifier'
     IDENTIFIER_VALUE = 'RelatedPerson.identifier'
@@ -557,12 +759,28 @@ class RelatedPersonClaim:
     ACTOR_IDENTIFIER = 'RelatedPerson.actor-identifier'
 
 class ResearchSubjectClaim:
-    """Canonical flat claims from TypeScript ``ResearchSubjectClaim``."""
+    """FHIR-like flat claims generated from TypeScript ``ResearchSubjectClaim``.
+
+    Only names published on the resource search page are canonical
+    FHIR search parameters. Other names require a FHIR standard or
+    custom extension contract.
+
+    Search parameters: https://hl7.org/fhir/researchsubject.html#search
+    Standard extensions: https://hl7.org/fhir/extensions/extensions-ResearchSubject.html
+    """
 
     IDENTIFIER = 'ResearchSubject.identifier'
 
 class TaskClaim:
-    """Canonical flat claims from TypeScript ``TaskClaim``."""
+    """FHIR-like flat claims generated from TypeScript ``TaskClaim``.
+
+    Only names published on the resource search page are canonical
+    FHIR search parameters. Other names require a FHIR standard or
+    custom extension contract.
+
+    Search parameters: https://hl7.org/fhir/task.html#search
+    Standard extensions: https://hl7.org/fhir/extensions/extensions-Task.html
+    """
 
     ID = 'Task.id'
     IDENTIFIER = 'Task.identifier'
