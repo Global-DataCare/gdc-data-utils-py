@@ -2,6 +2,9 @@
 
 ## Unreleased
 
+- Document and test the generic boundary from qualified FHIR search parameter
+  (`Condition.code:text`) to canonical flat claim (`Condition.code-text`) and
+  private physical index key (`condition_code-text`).
 - Add the synchronized FHIR IPS 2.0.1 profile catalog for all 28 resource types
   in the server CapabilityStatement, including per-field types, cardinalities,
   obligations and ValueSet bindings and all nine R4 vital-sign profiles.

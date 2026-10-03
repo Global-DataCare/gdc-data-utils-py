@@ -10,7 +10,12 @@ FHIR_API_CONTEXT = "org.hl7.fhir.api"
 
 
 def canonical_claim_for_search_parameter(resource_type: str, parameter: str) -> str:
-    """Map FHIR query syntax to the corresponding flat FHIR-like claim key."""
+    """Map a search suffix to its flat claim.
+
+    Generic boundary: ``<ResourceType>.<some-code>:text`` on the Research
+    search wire becomes canonical ``<ResourceType>.<some-code>-text``. The
+    later physical-index projection is a separate operation.
+    """
 
     resource = str(resource_type or "").strip()
     search_parameter = str(parameter or "").strip().lower()
@@ -21,7 +26,11 @@ def canonical_claim_for_search_parameter(resource_type: str, parameter: str) -> 
 
 
 def storage_key_for_claim(claim_key: str) -> str:
-    """Return the DataConv physical key without changing field-name hyphens."""
+    """Return the private physical key without changing field-name hyphens.
+
+    Example: ``Condition.code-text`` becomes ``condition_code-text``. This
+    physical key must never appear in API-CONFIG, claims or SDK requests.
+    """
 
     logical_key = str(claim_key or "").strip()
     resource, separator, field = logical_key.partition(".")
@@ -44,4 +53,3 @@ def normalize_fhir_api_claims(claims: Mapping[str, Any]) -> dict[str, Any]:
             continue
         normalized[key[len(prefix):] if key.startswith(prefix) else key] = value
     return normalized
-
