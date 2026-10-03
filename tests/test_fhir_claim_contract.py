@@ -51,6 +51,14 @@ def test_diagnostic_report_text_keeps_flat_claim_and_search_layers_distinct() ->
     )
 
 
+def test_condition_text_keeps_search_claim_and_private_index_layers_distinct() -> None:
+    # Condition.code:text -> Condition.code-text -> condition_code-text.
+    canonical_claim = canonical_claim_for_search_parameter("Condition", "code:text")
+
+    assert canonical_claim == "Condition.code-text"
+    assert storage_key_for_claim(canonical_claim) == "condition_code-text"
+
+
 def test_contextual_claim_normalization_preserves_flat_fhir_like_keys() -> None:
     claims = normalize_fhir_api_claims(
         {
